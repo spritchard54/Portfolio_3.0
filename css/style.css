@@ -1,0 +1,315 @@
+/* This is a declaration block and may contain one or more rules. */
+/* "body" is a selector */
+/* "background: bisque" is a style rule also known as a declaration */
+/* "background" is the property and "bisque" is the value within the declaration */
+
+/* COLOR PALETTE 
+Slategrey #708090
+Hit Gray #a7b5b9
+Stromboli #2e5e4e
+Bon Jour #dbd3d8
+Cascade #93a7aa
+Hit Gray #a7b5b9 */
+
+
+
+/* Global Styles */
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Set the default font size to 10px (16*.625=10) */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 0.85;
+}
+
+h2 {
+    font-size: 3.6rem;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+body {
+    /* background: #a7b5b9; */
+    background: #dbd3d8;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+
+/* Links */
+a {
+    color: #dbd3d8;
+    text-decoration: none;
+
+}
+/* Slategrey #708090 /Dark Grey
+Hit Gray #a7b5b9 /Light Grey
+Stromboli #2e5e4e /Dark Green
+Bon Jour #dbd3d8 /Light Tan
+Cascade #93a7aa /Light Green
+*/
+
+a:hover {
+    color: #a7b5b9;
+
+
+}
+
+footer a:hover {
+    /* font-weight: bold; */
+}
+
+.body-link {
+    color: #708090;
+    font-weight: bold;
+}
+
+.body-link:hover {
+    color: #2e5e4e;
+    font-weight: bold;
+}
+
+
+
+.btn {
+    background: #2e5e4e;
+    color: whitesmoke;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 7px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 1;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* HOME */
+.home {
+    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+
+.content-bg {
+    background: rgb(255 255 255 / 0.9);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:650px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+
+    .content-bg {
+        padding: 20px;
+    }
+}
+
+/* RESUME */
+.resume header::before {
+    background: url(../images/bg-home-office-studio.jpg) center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 375px;
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.resume-section {
+    margin-bottom: 50px;
+
+}
+
+.resume-section h2 {
+    border-bottom: 2px dashed #708090;
+}
+
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+}
+
+/* Profile */
+
+/* Projects */
+.project-item {
+    margin: 30px 0;
+}
+
+.project-item img {
+    width: 300px;
+}
+
+@media screen and (min-width: 860px) {
+    .project-item {
+        display: flow-root;
+    }
+
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+}
+
+@media screen and (min-width:650px) and (max-width: 859px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    .project-item img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .resume header::before {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+
+}
+
+/* Work Experience */
+.work-item {
+    margin: 30px 0;
+}
+
+.work-details p {
+    margin: 0;
+}
+
+@media screen and (min-width:860px) {
+    .work-item {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+
+    .work-summary p:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Education */
+.education-item {
+    margin: 30px 0;
+}
+
+.education-item p {
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    color:  whitesmoke;
+    background: #2e5e4e;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.socials img {
+    width: 32px;
+    opacity: 0.5;
+}
+
+.socials img:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 860px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:859px ){
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+    
+}
