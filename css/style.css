@@ -136,6 +136,10 @@ footer a:hover {
 }
 
 header {
+   
+}
+
+.headContainer {
     display: flex;
     flex-wrap: wrap;
 }
@@ -143,8 +147,6 @@ header {
 .profileHeader {
     flex: 75%;
 }
-
-
 
 .profileImg {
     color: red;
@@ -159,7 +161,7 @@ header {
     box-shadow: 5px 8px 25px black;
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:430px) {
     .profileHeader h1 {
         font-size: 3.6rem;
     }
