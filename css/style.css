@@ -60,7 +60,6 @@ h3 {
 }
 
 body {
-    /* background: #a7b5b9; */
     background: #dbd3d8;
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -76,12 +75,6 @@ a {
     text-decoration: none;
 
 }
-/* Slategrey #708090 /Dark Grey
-Hit Gray #a7b5b9 /Light Grey
-Stromboli #2e5e4e /Dark Green
-Bon Jour #dbd3d8 /Light Tan
-Cascade #93a7aa /Light Green
-*/
 
 a:hover {
     color: #a7b5b9;
@@ -102,8 +95,6 @@ footer a:hover {
     color: #2e5e4e;
     font-weight: bold;
 }
-
-
 
 .btn {
     background: #2e5e4e;
@@ -136,10 +127,51 @@ footer a:hover {
     flex: 1 0 auto;
 }
 
+
 .content-bg {
+    
     background: rgb(255 255 255 / 0.9);
     padding: 30px;
     border-radius: 10px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profileHeader {
+    flex: 75%;
+}
+
+
+
+.profileImg {
+    color: red;
+    margin: 0px 0px;
+    
+}
+
+.profileImg img {
+    margin-top: 5px;
+    max-width: 100px;
+    border-radius: 50%;
+    box-shadow: 5px 8px 25px black;
+}
+
+@media screen and (max-width:390px) {
+    .profileHeader h1 {
+        font-size: 3.6rem;
+    }
+
+    .profileHeader h2 {
+        font-size: 1.8rem;
+    }
+    
+    .profileImg img {
+        max-width: 55px;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -151,6 +183,8 @@ footer a:hover {
         padding: 20px;
     }
 }
+
+
 
 /* RESUME */
 .resume header::before {
@@ -274,7 +308,7 @@ footer a:hover {
 
 /* FOOTER */
 footer {
-    color:  whitesmoke;
+    color: whitesmoke;
     background: #2e5e4e;
 }
 
@@ -306,10 +340,10 @@ footer {
     }
 }
 
-@media screen and (max-width:859px ){
+@media screen and (max-width:859px) {
     footer {
         text-align: center;
         padding: 10px;
     }
-    
+
 }
