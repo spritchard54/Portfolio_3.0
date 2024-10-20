@@ -112,32 +112,33 @@ footer a:hover {
 .content-wrapper {
     margin: 0 auto;
     padding: 30px;
+    /* The element will not exceed 900px, but will equal 100% of the viewport window if less than 900px. */
     max-width: 900px;
 }
 
 /* HOME */
 .home {
     background: url(../images/bg-home-office-studio.jpg) no-repeat;
-    background-size: cover;
+    background-size: cover; /* fit the image to the size (width) of the viewport */
     display: flex;
     flex-direction: column;
 }
 
-.home .content-wrapper {
+/* .home .content-wrapper is a descendent selector and applies style to the background text on the index.html file. */
+.home .content-wrapper { 
     flex: 1 0 auto;
 }
 
-
+/* The background color below as 3 RGB values and the number folling the slash is the opactiy value */
 .content-bg {
-    
     background: rgb(255 255 255 / 0.9);
     padding: 30px;
     border-radius: 10px;
 }
 
-header {
+/* header {
    
-}
+} */
 
 .headContainer {
     display: flex;
@@ -186,17 +187,19 @@ header {
     }
 }
 
-
-
 /* RESUME */
+        /* .resume header only applied to the header on the resume page */
+        /* the ::before pseudo element creates and element that is the first child of the selected element. In this case the header. You must use the content property for this to work. */
 .resume header::before {
+        /* adding the center value to the end of the background property ensures the main part of the image is seen in the header */
     background: url(../images/bg-home-office-studio.jpg) center;
     background-size: cover;
+        /* The content property must be used for the ::before pseudo element to work. If not text is needed, just used empty quotes. */
     content: '';
+        /* Display must be set to block so the height can be set. */
     display: block;
-    height: 375px;
-    background-size: cover;
-    /* background-position: center; */
+        /* Set the default height of the content otherwise the element takes on the height of the content. Since the content is set to "" the height will be 0 unless otherwise specified. */
+    height: 375px; 
 }
 
 .resume-section {
