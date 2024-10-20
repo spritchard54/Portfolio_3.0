@@ -1,2 +1,2 @@
 # Portfolio_3.0
-Simple static site to demonstrate my proficiency in web development.
+I'll make updates to this as I go.
