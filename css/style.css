@@ -60,7 +60,7 @@ h3 {
 }
 
 body {
-    background: #dbd3d8;
+    background: #D5DCE6;
     margin: 0;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -118,7 +118,7 @@ footer a:hover {
 
 /* HOME */
 .home {
-    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background: url(../images/olympic_bg.jpeg) no-repeat;
     background-size: cover; /* fit the image to the size (width) of the viewport */
     display: flex;
     flex-direction: column;
@@ -192,7 +192,8 @@ footer a:hover {
         /* the ::before pseudo element creates and element that is the first child of the selected element. In this case the header. You must use the content property for this to work. */
 .resume header::before {
         /* adding the center value to the end of the background property ensures the main part of the image is seen in the header */
-    background: url(../images/bg-home-office-studio.jpg) center;
+    background: url(../images/olympic_bg.jpeg);
+    background-position: 0 35%;
     background-size: cover;
         /* The content property must be used for the ::before pseudo element to work. If not text is needed, just used empty quotes. */
     content: '';
