@@ -37,7 +37,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: "Caveat", cursive;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3rem;
     margin-top: 0;
 }
 
@@ -119,13 +119,14 @@ footer a:hover {
 /* HOME */
 .home {
     background: url(../images/olympic_bg.jpeg) no-repeat;
-    background-size: cover; /* fit the image to the size (width) of the viewport */
+    background-size: cover;
+    /* fit the image to the size (width) of the viewport */
     display: flex;
     flex-direction: column;
 }
 
 /* .home .content-wrapper is a descendent selector and applies style to the background text on the index.html file. */
-.home .content-wrapper { 
+.home .content-wrapper {
     flex: 1 0 auto;
 }
 
@@ -135,10 +136,6 @@ footer a:hover {
     padding: 30px;
     border-radius: 10px;
 }
-
-/* header {
-   
-} */
 
 .headContainer {
     display: flex;
@@ -152,7 +149,7 @@ footer a:hover {
 .profileImg {
     color: red;
     margin: 0px 0px;
-    
+
 }
 
 .profileImg img {
@@ -168,9 +165,9 @@ footer a:hover {
     }
 
     .profileHeader h2 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
-    
+
     .profileImg img {
         max-width: 55px;
         margin-top: 0;
@@ -187,20 +184,60 @@ footer a:hover {
     }
 }
 
+.tile-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tile {
+    background: rgb(255 255 255 / 0.9);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 100px;
+    width: 30%;
+    font-weight: bold;
+}
+
+.tile a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2e5e4e;
+    width: 100%;
+    height: 100%;
+}
+
+.tile a:hover {
+    color: whitesmoke;
+}
+
+.tile p {
+    width: 100%;
+}
+
+.tile:hover {
+    background-color: #2e5e4e;
+    opacity: 90%;
+    color: whitesmoke;
+}
+
 /* RESUME */
-        /* .resume header only applied to the header on the resume page */
-        /* the ::before pseudo element creates and element that is the first child of the selected element. In this case the header. You must use the content property for this to work. */
+/* .resume header only applied to the header on the resume page */
+/* the ::before pseudo element creates and element that is the first child of the selected element. In this case the header. You must use the content property for this to work. */
 .resume header::before {
-        /* adding the center value to the end of the background property ensures the main part of the image is seen in the header */
+    /* adding the center value to the end of the background property ensures the main part of the image is seen in the header */
     background: url(../images/olympic_bg.jpeg);
     background-position: 0 35%;
     background-size: cover;
-        /* The content property must be used for the ::before pseudo element to work. If not text is needed, just used empty quotes. */
+    /* The content property must be used for the ::before pseudo element to work. If not text is needed, just used empty quotes. */
     content: '';
-        /* Display must be set to block so the height can be set. */
+    /* Display must be set to block so the height can be set. */
     display: block;
-        /* Set the default height of the content otherwise the element takes on the height of the content. Since the content is set to "" the height will be 0 unless otherwise specified. */
-    height: 375px; 
+    /* Set the default height of the content otherwise the element takes on the height of the content. Since the content is set to "" the height will be 0 unless otherwise specified. */
+    height: 375px;
 }
 
 .resume-section {
@@ -273,11 +310,11 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 4.6rem;
     }
 
     h2 {
-        font-size: 2.6rem;
+        font-size: 1.7rem;
     }
 
 }
@@ -352,4 +389,75 @@ footer {
         padding: 10px;
     }
 
+}
+
+/* responsive image grid */
+
+.photos-wrapper {
+    margin: 0 auto;
+    padding: 15px;
+    /* The element will not exceed 900px, but will equal 100% of the viewport window if less than 900px. */
+    max-width: 1300px;
+}
+
+.header {
+    /* text-align: center; */
+    padding: 0px;
+}
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.photosLink {
+    color: #2e5e4e;
+    font-weight: bold;
+}
+
+.trip-holder {
+    min-height: 100vh;
+}
+
+.trip-holder a {
+color: #2e5e4e;
+font-weight: bold;
 }
