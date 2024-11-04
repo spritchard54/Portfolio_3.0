@@ -82,9 +82,7 @@ a:hover {
 
 }
 
-footer a:hover {
-    /* font-weight: bold; */
-}
+
 
 .body-link {
     color: #708090;
@@ -144,6 +142,10 @@ footer a:hover {
 
 .profileHeader {
     flex: 75%;
+}
+
+.profileHeader h2 {
+    margin-top: 10px;
 }
 
 .profileImg {
@@ -342,10 +344,19 @@ footer a:hover {
 
 /* Education */
 .education-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 30px 0;
 }
 
 .education-item p {
+    margin: 0;
+}
+ 
+.education-item h3 {
+    flex: 1 0 90%;
     margin: 0;
 }
 
@@ -460,4 +471,23 @@ footer {
 .trip-holder a {
 color: #2e5e4e;
 font-weight: bold;
+}
+
+.school {
+position: relative;
+}
+
+.link {
+    margin-left: 25px;
+    height: 15px;
+}
+
+.link:hover {
+    height: 20px;
+}
+
+@media screen and (max-width: 430px) {
+    .link {
+        display: none;
+    }
 }
