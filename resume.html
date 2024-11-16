@@ -74,9 +74,16 @@
         <div class="project-wrapper">
           <section class="project-item">
             <img
-              srcset="images/actMe_500w.png 500w, images/actMe_1000w.png 1000w"
+              srcset="
+                images/actMe_500w.png 500w, 
+                images/actMe_1000w.png 1000w"
               src="images/actMe_500w.png"
-              alt="Biz cards project"
+              sizes="
+                (min-width: 860px) 300px, 
+                (min-width: 700px) calc(50vw - 40px), 
+                (min-width: 520px) 300px, 
+                calc(100vw - 60px)"
+              alt="Screen shot of Activate Me website."
             />
             <h3>ActivateMe</h3>
             <p>
@@ -91,7 +98,14 @@
 
           <section class="project-item">
             <img
-              srcset="images/weatherDash_500w.png 500w, images/weatherDash_1000w.png 1000w"
+              srcset="
+              images/weatherDash_500w.png 500w, 
+              images/weatherDash_1000w.png 1000w"
+              sizes="
+                (min-width: 860px) 300px, 
+                (min-width: 700px) calc(50vw - 40px), 
+                (min-width: 520px) 300px, 
+                calc(100vw - 60px)"
               src="images/weatherDash_500w.png"
               alt="Weather Forecast"
             />
