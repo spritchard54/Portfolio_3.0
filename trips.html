@@ -134,68 +134,140 @@
             </section>
           </div>
           <div class="trips-col">
-            
             <div class="container">
-
               <!-- Full-width images with number text -->
               <div class="mySlides">
                 <div class="numbertext">1 / 6</div>
-                  <img src="./images/tripsImages/IMG_6147.jpeg" style="width:100%">
+                <img
+                  srcset="
+                    images/tripsImages/339px/IMG_6147-339w.jpeg 339w,
+                    images/tripsImages/815px/IMG_6147-815w.jpeg 815w,
+                    images/tripsImages/1090px/IMG_6147-1090w.jpeg 1090w,
+                    images/tripsImages/1300px/IMG_6147-1300w.jpeg 1300w,
+                    images/tripsImages/1590px/IMG_6147-1590w.jpeg 1590w,
+                    images/tripsImages/1830px/IMG_6147-1830w.jpeg 1830w,
+                    images/tripsImages/2048px/IMG_6147-2048w.jpeg 2048w,
+                  "
+                  sizes="calc(45vw - 49px)"
+                  src="images/tripsImages/2048px/IMG_6147-2048w.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <div class="mySlides">
                 <div class="numbertext">2 / 6</div>
-                  <img src="images/tripsImages/IMG_6149.jpeg" style="width:100%">
+                <img
+                  src="images/tripsImages/IMG_6149.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <div class="mySlides">
                 <div class="numbertext">3 / 6</div>
-                  <img src="images/tripsImages/IMG_6154.jpeg" style="width:100%">
+                <img
+                  src="images/tripsImages/IMG_6154.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <div class="mySlides">
                 <div class="numbertext">4 / 6</div>
-                  <img src="images/tripsImages/IMG_6196.jpeg" style="width:100%">
+                <img
+                  src="images/tripsImages/IMG_6196.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <div class="mySlides">
                 <div class="numbertext">5 / 6</div>
-                  <img src="images//tripsImages/IMG_6240.jpeg" style="width:100%">
+                <img
+                  src="images//tripsImages/IMG_6240.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <div class="mySlides">
                 <div class="numbertext">6 / 6</div>
-                  <img src="images/tripsImages/IMG_1544.jpeg" style="width:100%">
+                <img
+                srcset="
+                    images/tripsImages/339px/IMG_6228-339w.jpeg 339w,
+                    images/tripsImages/815px/IMG_6228-815w.jpeg 815w,
+                    images/tripsImages/1090px/IMG_6228-1090w.jpeg 1090w,
+                    images/tripsImages/1300px/IMG_6228-1300w.jpeg 1300w,
+                    images/tripsImages/1590px/IMG_6228-1590w.jpeg 1590w,
+                    images/tripsImages/1830px/IMG_6228-1830w.jpeg 1830w,
+                    images/tripsImages/2048px/IMG_6228-2048w.jpeg 2048w,
+                  "
+                  sizes="calc(45vw - 49px)"
+                  src="images/tripsImages/339px/IMG_6228-339w.jpeg"
+                  style="width: 100%"
+                />
               </div>
-            
+
               <!-- Next and previous buttons -->
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
+
               <!-- Image text -->
               <div class="caption-container">
                 <p id="caption"></p>
               </div>
-            
+
               <!-- Thumbnail images -->
-              <div class="row">
-                <div class="column">
-                  <img class="demo cursor" src="./images/tripsImages/IMG_6147.jpeg" style="width:100%" onclick="currentSlide(1)" alt="El Capitan from a distance">
+              <div class="gallery-row">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="./images/tripsImages/339px/IMG_6147-339w.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(1)"
+                    alt="El Capitan from a distance"
+                  />
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/tripsImages/IMG_6149.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="images/tripsImages/IMG_6149.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(2)"
+                    alt="Cinque Terre"
+                  />
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/tripsImages/IMG_6154.jpeg" style="width:100%" onclick="currentSlide(3)" alt="El Cap from the meadows.">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="images/tripsImages/IMG_6154.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(3)"
+                    alt="El Cap from the meadows."
+                  />
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/tripsImages/IMG_6196.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Open flats on the John Muir Trail">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="images/tripsImages/IMG_6196.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(4)"
+                    alt="Open flats on the John Muir Trail"
+                  />
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="images//tripsImages/IMG_6240.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Yosemite looking like Mordor.">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="images//tripsImages/IMG_6240.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(5)"
+                    alt="Yosemite looking like Mordor."
+                  />
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/tripsImages/IMG_1544.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Wildfire smoke blankets Yosemite.">
+                <div class="gallery-column">
+                  <img
+                    class="demo cursor"
+                    src="images/tripsImages/339px/IMG_6228-339w.jpeg"
+                    style="width: 100%"
+                    onclick="currentSlide(6)"
+                    alt="Wildfire smoke blankets Yosemite."
+                  />
                 </div>
               </div>
             </div>
