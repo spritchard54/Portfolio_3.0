@@ -68,7 +68,6 @@ body {
     line-height: 1.4;
 }
 
-
 /* Links */
 a {
     color: #dbd3d8;
@@ -81,8 +80,6 @@ a:hover {
 
 
 }
-
-
 
 .body-link {
     color: #708090;
@@ -354,7 +351,7 @@ a:hover {
 .education-item p {
     margin: 0;
 }
- 
+
 .education-item h3 {
     flex: 1 0 90%;
     margin: 0;
@@ -435,11 +432,23 @@ footer {
     padding: 0 4px;
 }
 
-.column img {
+/* .column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    animation-name: scale-in;
+    animation-duration: .4s;
 }
+
+@keyframes scale-in {
+    0% {
+        img: 0%;
+    }
+
+    100% {
+        img: 100%;
+    }
+} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -464,17 +473,41 @@ footer {
     font-weight: bold;
 }
 
+
+/* TRIPS */
+
+.trips-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+}
+.trips-main {
+    padding: 15px 25px;
+} 
+
+.trips-overview {
+    width: 100%;
+}
+
+.trips-row {
+    display: flex;
+}
+
+.trips-col {
+    max-width: 50%;
+    margin-left: 20px;
+}
+
 .trip-holder {
     min-height: 100vh;
 }
 
 .trip-holder a {
-color: #2e5e4e;
-font-weight: bold;
+    color: #2e5e4e;
+    font-weight: bold;
 }
 
 .school {
-position: relative;
+    position: relative;
 }
 
 .link {
