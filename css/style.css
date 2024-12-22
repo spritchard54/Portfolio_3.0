@@ -11,8 +11,6 @@ Bon Jour #dbd3d8
 Cascade #93a7aa
 Hit Gray #a7b5b9 */
 
-
-
 /* Global Styles */
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -495,13 +493,30 @@ footer {
 
 /* TRIPS */
 
+@media screen and (max-width:500px) {
+    h1.trips {
+        margin: 15px 20px 0px 20px;
+    }
+}
+
+h2.trips {
+    font-size: 3rem;
+}
+
 .trips-wrapper {
     margin: 0 auto;
     padding: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .trips-wrapper {
+        padding: 0px;
+    }
+}
+
 .trips-main {
     padding: 15px 25px;
-} 
+}
 
 .trips-overview {
     width: 100%;
@@ -513,7 +528,16 @@ footer {
 
 .trips-col {
     max-width: 50%;
-    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .trips-row {
+        flex-direction: column-reverse;
+    }
+
+    .trips-col {
+        max-width: 100%;
+    }
 }
 
 .trips-image {
@@ -538,21 +562,27 @@ footer {
     position: relative;
     width: 90%;
     margin: 0 auto;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Hide the images by default */
+.mySlides {
     display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
     cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -565,55 +595,69 @@ footer {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+}
+
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
+}
+
+/* Container for image text */
+.caption-container {
     text-align: center;
     background-color: #222;
     padding: 2px 16px;
     color: white;
-  }
-  
-  .gallery-row:after {
+}
+
+@media screen and (max-width: 600px) {
+    .caption-container {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.gallery-row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Six columns side by side */
-  .gallery-column {
+}
+
+@media screen and (max-width: 600px) {
+    .gallery-row {
+        display: none;
+    }
+}
+
+/* Six columns side by side */
+.gallery-column {
     float: left;
     width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
     opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
+}
+
+.active,
+.demo:hover {
     opacity: 1;
-  }
+}
