@@ -495,6 +495,7 @@ footer {
 
 @media screen and (max-width:500px) {
     h1.trips {
+        font-size: 4.5rem;
         margin: 15px 20px 0px 20px;
     }
 }
