@@ -662,3 +662,26 @@ h2.trips {
 .demo:hover {
     opacity: 1;
 }
+
+.trip-details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: 4px;
+}
+
+.trip-date {
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px 5px;
+    min-width: 49%;
+    background-color: #2e5e4e;
+}
+
+.trip-data {
+    align-content: left;
+    border: 1px solid #2e5e4e;
+    color: #2e5e4e;
+    min-width: 49%;
+}
