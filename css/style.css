@@ -674,7 +674,7 @@ h2.trips {
     color: whitesmoke;
     font-weight: bold;
     margin-top: 5px;
-    padding: 5px 5px;
+    padding: 10px 5px;
     min-width: 49%;
     background-color: #2e5e4e;
 }
@@ -684,4 +684,24 @@ h2.trips {
     border: 1px solid #2e5e4e;
     color: #2e5e4e;
     min-width: 49%;
+    padding: 5px 5px;
+}
+
+.trip-data p {
+    margin: 0;
+}
+
+.trip-date p {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .trip-data {
+        margin-bottom: 15px
+    }
+    .tripsNav {
+        text-align: right;
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
 }
