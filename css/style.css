@@ -699,9 +699,15 @@ h2.trips {
     .trip-data {
         margin-bottom: 15px
     }
+
     .tripsNav {
         text-align: right;
         margin-bottom: 30px;
         margin-right: 30px;
     }
+}
+
+/* Leaflet Map Style */
+#map {
+    height: 400px;
 }
