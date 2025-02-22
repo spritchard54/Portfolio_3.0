@@ -8,7 +8,7 @@ var philadelphia = L.marker([39.95, -75.16]).bindPopup('This is Philadelphia, PA
 
 var cities = L.layerGroup([philadelphia]);
 
-var yose = L.marker([37.86, -119.53],{icon: npsIcon}).bindPopup('<a href="trips.html">Yosemite National Park</a>'),
+var yose = L.marker([37.86, -119.53],{icon: npsIcon}).bindPopup('<b>Yosemite National</b> Park<a href="trips.html"><br>[Details...]</a>'),
     olym = L.marker([47.79, -123.61],{icon: npsIcon}).bindPopup('Olympic National Park.');
     shen = L.marker([38.47, -78.45],{icon: npsIcon}).bindPopup('Shenandoah National Park.');
     neri = L.marker([37.87, -81.05],{icon: npsIcon}).bindPopup('New River Gorge National Park.');
@@ -25,9 +25,10 @@ var yose = L.marker([37.86, -119.53],{icon: npsIcon}).bindPopup('<a href="trips.
     redw = L.marker([41.39, -124.04],{icon: npsIcon}).bindPopup('Redwood National Park.');
     jotr = L.marker([33.86, -115.91],{icon: npsIcon}).bindPopup('Joshua Tree National Park.');
     grca = L.marker([36.26, -112.35],{icon: npsIcon}).bindPopup('Grand Canyon National Park.');
+    gaar = L.marker([38.62, -90.18],{icon: npsIcon}).bindPopup('Gateway Arch National Park.');
     
 
-var parks = L.layerGroup([yose, olym, shen, neri, indu, cuva, zion, yell, grte, glac, badl, mora, maca, crla, redw, jotr, grca]);
+var parks = L.layerGroup([yose, olym, shen, neri, indu, cuva, zion, yell, grte, glac, badl, mora, maca, crla, redw, jotr, grca, gaar]);
 var openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: 'Map data: © OpenStreetMap contributors, SRTM | Map style: © OpenTopoMap (CC-BY-SA)'

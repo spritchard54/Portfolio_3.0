@@ -711,3 +711,21 @@ h2.trips {
 #map {
     height: 550px;
 }
+
+/* trips homepage */
+.mapData {
+    width: 150px;
+    background-color: #2e5e4e;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    
+}
+
+.mapDataNo {
+    font-size: 25px;
+    font-weight: bold;
+    
+}
