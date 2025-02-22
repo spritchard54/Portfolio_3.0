@@ -8,7 +8,7 @@ var philadelphia = L.marker([39.95, -75.16]).bindPopup('This is Philadelphia, PA
 
 var cities = L.layerGroup([philadelphia]);
 
-var yose = L.marker([37.86, -119.53],{icon: npsIcon}).bindPopup('<b>Yosemite National</b> Park<a href="trips.html"><br>[Details...]</a>'),
+var yose = L.marker([37.86, -119.53],{icon: npsIcon}).bindPopup('<b>Yosemite National</b> Park<a href="yose.html"><br>[Details...]</a>'),
     olym = L.marker([47.79, -123.61],{icon: npsIcon}).bindPopup('Olympic National Park.');
     shen = L.marker([38.47, -78.45],{icon: npsIcon}).bindPopup('Shenandoah National Park.');
     neri = L.marker([37.87, -81.05],{icon: npsIcon}).bindPopup('New River Gorge National Park.');
