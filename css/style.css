@@ -713,6 +713,13 @@ h2.trips {
 }
 
 /* trips homepage */
+.tripStats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
 .mapData {
     width: 150px;
     background-color: #2e5e4e;
@@ -721,6 +728,7 @@ h2.trips {
     border-radius: 15px;
     padding: 10px;
     margin: 10px 0;
+    margin-right: 10px;
     
 }
 
