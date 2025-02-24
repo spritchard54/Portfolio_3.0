@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MP8VWSEEPG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MP8VWSEEPG");
+    </script>
+    <!-- <script
+      src="https://kit.fontawesome.com/b26623559b.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Web Developer, National Parks, Photography"
+    />
+    <meta
+      name="description"
+      content="This site is most things Steve Pritchard including recent web development work, photographs of National Parks, and more. "
+    />
+    <meta name="author" content="Steve Pritchard" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <title>Steve Pritchard | Contact Me</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <div class="trips-wrapper">
+      <header>
+        <h1 class="trips">Contact Me</h1>
+      </header>
+      <main class="trips-main">
+        <form id="contactForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+
+      </main>
+    </div>
+    <footer>
+      <!-- Start content edits below this line. -->
+      <p>
+        © 2024 by Steve Pritchard |
+        <a href="mailto:swpritchard54@gmail.com">swpritchard54@gmail.com</a>
+      </p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/spritchard54" target="_blank"
+            ><img src="images/github-mark.png" alt="Github"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" target="_blank"
+            ><img src="images/icon-logo-linkedin.png" alt="linkedin icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/steve_p.54/" target="_blank"
+            ><img src="images/icon-logo-instagram.png" alt="instagram icon"
+          /></a>
+        </li>
+      </ul>
+
+      <!-- End content edits here. -->
+    </footer>
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(event) {
+            let isValid = true;
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            if (nameInput.value.trim() === '') {
+                isValid = false;
+                alert('Please enter your name.');
+            }
+
+            if (emailInput.value.trim() === '') {
+                 isValid = false;
+                alert('Please enter your email.');
+            } else if (!isValidEmail(emailInput.value)) {
+                isValid = false;
+                alert('Please enter a valid email address.');
+            }
+
+            if (messageInput.value.trim() === '') {
+                isValid = false;
+                alert('Please enter a message.');
+            }
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+                alert('Form submitted successfully!');
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+  </body>
+</html>
