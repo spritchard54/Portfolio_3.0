@@ -63,6 +63,9 @@ grca = L.marker([36.26, -112.35], { icon: npsIcon }).bindPopup(
 gaar = L.marker([38.62, -90.18], { icon: npsIcon }).bindPopup(
   "Gateway Arch National Park."
 );
+havo = L.marker([19.51, -155.37], { icon: npsIcon }).bindPopup(
+  "Hawaiʻi Volcanoes National Park"
+);
 
 var parks = L.layerGroup([
   yose,
@@ -83,6 +86,7 @@ var parks = L.layerGroup([
   jotr,
   grca,
   gaar,
+  havo,
 ]);
 var openTopoMap = L.tileLayer(
   "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
@@ -108,19 +112,18 @@ var osmHOT = L.tileLayer(
 );
 
 function setInitialMapZoom() {
-    var viewportWidth = window.innerWidth;
-  
-    var mapZoom;
-  
-    if (viewportWidth < [651]) {
-      mapZoom = [3];
-    } else {
-      mapZoom = [4];
-    }
-  
-    return mapZoom;
+  var viewportWidth = window.innerWidth;
+
+  var mapZoom;
+
+  if (viewportWidth < [651]) {
+    mapZoom = [2];
+  } else {
+    mapZoom = [3];
   }
 
+  return mapZoom;
+}
 
 var map = L.map("map", {
   center: [40.01224336270498, -97.76226241579424],
