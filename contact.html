@@ -45,12 +45,14 @@
     />
     <title>Steve Pritchard | Contact Me</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "tAk--ITlsdsIrYTV8",
+              publicKey: "fUe9WiTn1IEbvYkBd",
             });
         })();
     </script>
@@ -59,7 +61,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_5zo4ntr', 'contact_form', this)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
@@ -120,43 +122,9 @@
 
       <!-- End content edits here. -->
     </footer>
-    <script>
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', function(event) {
-            let isValid = true;
+    
 
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const messageInput = document.getElementById('message');
 
-            if (nameInput.value.trim() === '') {
-                isValid = false;
-                alert('Please enter your name.');
-            }
 
-            if (emailInput.value.trim() === '') {
-                 isValid = false;
-                alert('Please enter your email.');
-            } else if (!isValidEmail(emailInput.value)) {
-                isValid = false;
-                alert('Please enter a valid email address.');
-            }
-
-            if (messageInput.value.trim() === '') {
-                isValid = false;
-                alert('Please enter a message.');
-            }
-            if (!isValid) {
-                event.preventDefault();
-            } else {
-                alert('Form submitted successfully!');
-            }
-        });
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    </script>
   </body>
 </html>
