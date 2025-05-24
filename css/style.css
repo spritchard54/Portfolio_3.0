@@ -16,6 +16,7 @@ Hit Gray #a7b5b9 */
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 html {
+    height: 100%;
     box-sizing: border-box;
     font-size: 62.5%;
     /* Set the default font size to 10px (16*.625=10) */
@@ -30,6 +31,7 @@ html {
 html,
 body {
     height: 100%;
+
 }
 
 h1,
@@ -64,6 +66,9 @@ body {
     font-style: normal;
     font-size: 1.5rem;
     line-height: 1.4;
+    /* next two lines are footer realted */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Links */
@@ -378,6 +383,8 @@ a:hover {
 footer {
     color: whitesmoke;
     background: #2e5e4e;
+    /* forces footer to the bottom of the page */
+    flex-shrink: 0;
 }
 
 .socials {
@@ -505,8 +512,10 @@ h2.trips {
 }
 
 .trips-wrapper {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 30px;
+    /* Lines below footer related */
+    flex: 1 0 auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -729,11 +738,47 @@ h2.trips {
     padding: 10px;
     margin: 10px 0;
     margin-right: 10px;
-    
+
 }
 
 .mapDataNo {
     font-size: 25px;
     font-weight: bold;
-    
+
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#contact-form>input {
+    margin: 0 0 10px 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#contact-form>input:focus {
+    outline: none;
+    border: 2px solid #2e5e4e;
+}
+
+#contact-form>textarea {
+    min-height: 100px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#contact-form>textarea:focus {
+    outline: none;
+    border: 2px solid #2e5e4e;
+}
+
+#contact-form>input[type=submit]:hover {
+    background-color: #93a7aa;
+    font-weight: bold;
 }
