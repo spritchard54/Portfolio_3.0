@@ -65,10 +65,12 @@
                 emailjs.sendForm('service_5zo4ntr', 'contact_form', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        window.location.href = "success_page.html";
+                    // document.getElementById("contact-form").reset();
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-                    document.getElementById("contact-form").reset();
+                    
             });
             
         }
