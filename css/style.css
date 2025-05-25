@@ -782,3 +782,15 @@ h2.trips {
     background-color: #93a7aa;
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    #contact-form>input[type=submit] {
+        background-color: #2e5e4e;
+        color: whitesmoke;
+    }
+
+    #contact-form>input[type=submit]:hover {
+        background-color: #93a7aa;
+        font-weight: bold;
+    }
+}
