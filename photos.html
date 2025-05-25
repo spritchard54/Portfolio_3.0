@@ -41,6 +41,16 @@
     ></script>
   </head>
   <body class="photos">
+     <!-- NAVIGATION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="contact.html">Contact</a>
+    </div>
+    <span style="font-size: 30px; color: whitesmoke; text-align: right; cursor: pointer; margin: 10px 50px 0 0;" onclick="openNav()"
+      >&#9776; Menu</span
+    >
     <main class="photos-wrapper">
       <!-- Header -->
       <div class="header">
@@ -442,4 +452,13 @@
       <!-- End content edits here. -->
     </footer>
   </body>
+  <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
 </html>

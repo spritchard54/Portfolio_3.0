@@ -21,8 +21,11 @@
       name="keywords"
       content="HTML, CSS, JavaScript, Web Developer, National Parks, Photography"
     />
-    <meta name="description" content="This site is most things Steve Pritchard including recent web development work, photographs of National Parks, and more. " />
-    <meta name="author" content="Steve Pritchard">
+    <meta
+      name="description"
+      content="This site is most things Steve Pritchard including recent web development work, photographs of National Parks, and more. "
+    />
+    <meta name="author" content="Steve Pritchard" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,11 +42,30 @@
     ></script>
   </head>
   <body class="home">
+    <!-- NAVIGATION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="contact.html">Contact</a>
+    </div>
+    <span
+      style="
+        font-size: 30px;
+        color: whitesmoke;
+        text-align: right;
+        cursor: pointer;
+        margin: 10px 50px 0 0;
+      "
+      onclick="openNav()"
+      >&#9776; Menu</span
+    >
     <!-- //  INTRO  // -->
     <div class="content-wrapper">
       <div class="content-bg">
         <header>
           <!-- Start content edits below this line. -->
+
           <span class="headContainer">
             <span class="profileHeader">
               <h1>Steve Pritchard</h1>
@@ -118,5 +140,14 @@
       </ul>
       <!-- End content edits here. -->
     </footer>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>
