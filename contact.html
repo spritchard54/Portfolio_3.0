@@ -81,11 +81,23 @@
     </script>
   </head>
   <body>
+    <!-- NAVIGATION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="contact.html">Contact</a>
+    </div>
+    <span style="font-size: 30px; color: whitesmoke; text-align: right; cursor: pointer; margin: 10px 50px 0 0;" onclick="openNav()"
+      >&#9776; Menu</span
+    >
     <div class="trips-wrapper">
+      
       <header>
         <h1 class="trips">Contact Me</h1>
       </header>
       <main class="trips-main">
+        
         <form id="contact-form">
           <!-- To simplify the tutorial, the value is static. -->
           <input type="hidden" name="time" value="Mar 10 2025 08:46" />
@@ -134,5 +146,14 @@
 
       <!-- End content edits here. -->
     </footer>
+   <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>

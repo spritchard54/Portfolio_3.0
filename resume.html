@@ -33,15 +33,31 @@
     
 
   </head>
+  
   <body class="resume">
+    
     <!-- //  INTRO  // -->
     <a class="btn download-link" target="_blank" href="SPritchard_Resume_20240129.pdf">Download PDF</a>
+
+          <!-- NAVIGATION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="contact.html">Contact</a>
+    </div>
+    <span style="font-size: 30px; color: whitesmoke; text-align: right; cursor: pointer; margin: 10px 50px 0 0;" onclick="openNav()"
+      >&#9776; Menu</span
+    >
+   
+    
     <header>
       <!-- Start content edits below this line. -->
       <div class="content-wrapper">
         <h1>Steve Pritchard</h1>
         <h2>Tech Enthusiast | Aspiring Web Developer</h2>
       </div>
+      
       <!-- End content edits here. -->
     </header>
 
@@ -264,5 +280,14 @@
 
       <!-- End content edits here. -->
     </footer>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>
