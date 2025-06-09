@@ -718,6 +718,7 @@ h2.trips {
 
 /* Leaflet Map Style */
 #map {
+    z-index: 0;
     height: 550px;
 }
 
