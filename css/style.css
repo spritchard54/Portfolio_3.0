@@ -188,12 +188,12 @@ a:hover {
 
 .tile-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .tile {
+    position: relative;
     background: rgb(255 255 255 / 0.9);
     display: flex;
     border-radius: 10px;
@@ -203,18 +203,43 @@ a:hover {
     font-weight: bold;
 }
 
+.subTile {
+    padding: 25px 10px;
+    background-color: #2e5e4e;
+    text-align: center;
+    line-height: 10%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.subTile:hover {
+    opacity: 1;
+}
+
+.material-icons {
+    /* color: white; */
+    margin: auto;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+    
+}
+
 .tile a {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #2e5e4e;
+    color: whitesmoke;
     width: 100%;
     height: 100%;
 }
 
-.tile a:hover {
-    color: whitesmoke;
-}
+
 
 .tile p {
     width: 100%;
@@ -225,6 +250,10 @@ a:hover {
     opacity: 90%;
     color: whitesmoke;
 }
+
+
+
+
 
 /* RESUME */
 /* .resume header only applied to the header on the resume page */
@@ -857,4 +886,11 @@ h2.trips {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+.material-symbols-outlined {
+    display: block;
+    margin: auto;
+    padding-right: 45%;
+
 }

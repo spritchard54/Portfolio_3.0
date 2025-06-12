@@ -17,6 +17,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta
       name="keywords"
       content="HTML, CSS, JavaScript, Web Developer, National Parks, Photography"
@@ -32,15 +33,15 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Steve Pritchard | Tech Enthusiast | Aspiring Web Developer</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <script
-      src="https://kit.fontawesome.com/b26623559b.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
+
   <body class="home">
     <!-- NAVIGATION -->
     <div id="mySidenav" class="sidenav">
@@ -95,21 +96,38 @@
       </div>
       <div class="tile-container">
         <div class="tile">
-          <a href="photos.html"><p>Photos</p></a>
+          <span class="material-icons md-48"> photo_camera </span>
+
+          <div class="subTile">
+            <a href="photos.html"><p>Photos</p></a>
+          </div>
         </div>
+
         <div class="tile">
-          <a href="trips.html"><p>Trips</p></a>
+          <span class="material-icons md-48"> explore </span>
+          <div class="subTile">
+            <a href="trips.html"><p>Trips</p></a>
+          </div>
         </div>
+
         <div class="tile">
-          <a href="resume.html"><p>Resume</p></a>
+          <span class="material-icons md-48"> laptop_mac </span>
+          <div class="subTile">
+            <a href="resume.html"><p>Resume</p></a>
+          </div>
         </div>
       </div>
     </div>
+
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer class="footer">
       <!-- Start content edits below this line. -->
       <p>
-        Copyright &copy; 2024-<script>document.write(new Date().getFullYear())</script> Steve Pritchard |
+        Copyright &copy; 2024-
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Steve Pritchard |
         <a href="mailto:swpritchard54@gmail.com">swpritchard54@gmail.com</a>
       </p>
 
