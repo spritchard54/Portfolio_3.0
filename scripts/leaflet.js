@@ -4,8 +4,8 @@ var npsIcon = L.icon({
 });
 
 var nzIcon = L.icon({
-  iconUrl: "../images/FLNP_logo.svg",
-  iconSize: [110, 100], // size of the icon
+  iconUrl: "../images/FLNP_logo.png",
+  iconSize: [35, 45], // size of the icon
 });
 
 var philadelphia = L.marker([39.95, -75.16]).bindPopup(
