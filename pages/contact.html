@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MP8VWSEEPG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MP8VWSEEPG");
+    </script>
+    <!-- <script
+      src="https://kit.fontawesome.com/b26623559b.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Web Developer, National Parks, Photography"
+    />
+    <meta
+      name="description"
+      content="This site is most things Steve Pritchard including recent web development work, photographs of National Parks, and more. "
+    />
+    <meta name="author" content="Steve Pritchard" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <title>Steve Pritchard | Contact Me</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "fUe9WiTn1IEbvYkBd",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // these IDs from the previous steps
+            emailjs.sendForm("service_5zo4ntr", "contact_form", this).then(
+              () => {
+                console.log("SUCCESS!");
+                window.location.href = "success_page.html";
+                // document.getElementById("contact-form").reset();
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+  </head>
+  <body>
+<!-- NAVIGATION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="../index.html">Home</a>
+      <a href="/pages/photos.html">Photos</a>
+      <a href="/pages/trips.html">Trips</a>
+      <a href="/pages/resume.html">Resume</a>
+    </div>
+    <span class="nav" onclick="openNav()"
+      >&#9776; Menu</span
+    >
+    <div class="trips-wrapper">
+      
+      <header>
+        <h1 class="trips">Contact Me</h1>
+      </header>
+      <main class="trips-main">
+        
+        <form id="contact-form">
+          <!-- To simplify the tutorial, the value is static. -->
+          <input type="hidden" name="time" value="Mar 10 2025 08:46" />
+          <label>Name</label>
+          <input type="text" name="name" required />
+          <label>Email</label>
+          <input type="email" name="email" required />
+          <label>Subject</label>
+          <input type="text" name="title" required />
+          <label>Message</label>
+          <textarea name="message" required></textarea>
+          <input type="submit" value="Send" />
+        </form>
+       
+      </main>
+    </div>
+    <footer>
+      <!-- Start content edits below this line. -->
+      <p>
+        Copyright &copy; 2024-<script>document.write(new Date().getFullYear())</script> Steve Pritchard |
+        <a href="mailto:swpritchard54@gmail.com">swpritchard54@gmail.com</a>
+      </p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/spritchard54" target="_blank"
+            ><img src="../images/github-mark.png" alt="Github"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" target="_blank"
+            ><img src="../images/icon-logo-linkedin.png" alt="linkedin icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/steve_p.54/" target="_blank"
+            ><img src="../images/icon-logo-instagram.png" alt="instagram icon"
+          /></a>
+        </li>
+      </ul>
+
+      <!-- End content edits here. -->
+    </footer>
+   <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
+</html>
