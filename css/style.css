@@ -227,7 +227,7 @@ a:hover {
 
 .material-icons.md-48 {
     font-size: 48px;
-    
+
 }
 
 .tile a {
@@ -888,9 +888,22 @@ h2.trips {
     }
 }
 
-.material-symbols-outlined {
+/* .material-symbols-outlined {
     display: block;
     margin: auto;
     padding-right: 45%;
+} */
 
+.ski-div-icon {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center; /* vertical centering */
+    padding-right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px;
+}
+
+.material-symbols-outlined {
+    color: #2e5e4e;
 }

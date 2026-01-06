@@ -1,3 +1,4 @@
+// Icons that appear on the map for each layer
 var npsIcon = L.icon({
   iconUrl: "../images/nps.png",
   iconSize: [50, 45], // size of the icon
@@ -8,19 +9,73 @@ var nzIcon = L.icon({
   iconSize: [35, 45], // size of the icon
 });
 
+var skiIcon = L.divIcon({
+  className: 'ski-div-icon',
+  html: '<span class="material-symbols-outlined">downhill_skiing</span>',
+  iconSize: [35,35], // size of the icon
+});
+
+// Map Layers
 var philadelphia = L.marker([39.95, -75.16]).bindPopup(
   "Home - Philadelphia, PA."
 );
 
 var cities = L.layerGroup([philadelphia]);
 
-yose = L.marker([37.86, -119.53], { icon: npsIcon }).bindPopup(
-    '<b>Yosemite National</b> Park<a href="yose.html"><br>[Details...]</a>'
-  ),
+// skiSlopes
+var shawnee = L.marker([41.03875493733112, -75.08159465465165], {
+  icon: skiIcon,
+}).bindPopup("Shawnee Ski Resort");
 
-olym = L.marker([47.79, -123.61], { icon: npsIcon }).bindPopup(
+var camelback = L.marker([41.05162999763743, -75.35604835434484], {
+  icon: skiIcon,
+}).bindPopup("Camelback Ski Resort");
+
+var montage = L.marker([41.35102796478296, -75.66220855992954], {
+  icon: skiIcon,
+}).bindPopup("Montage Mountain Ski Resort");
+
+var jackfrost = L.marker([41.107791055107214, -75.65333273864887], {
+  icon: skiIcon,
+}).bindPopup("Jack Frost Ski Resort");
+
+var sawmill = L.marker([41.519434267911514, -77.28955182505472], {
+  icon: skiIcon,
+}).bindPopup("Ski Sawmill");
+
+var blueknob = L.marker([40.28900147860789, -78.56323906130943], {
+  icon: skiIcon,
+}).bindPopup("Blue Knob Ski Resort");
+
+var whiteface = L.marker([44.35355076715748, -73.86151309738013], {
+  icon: skiIcon,
+}).bindPopup("Whiteface Mountain Ski Resort");
+
+var stowe = L.marker([44.53029368089624, -72.78573713800019], {
+  icon: skiIcon,
+}).bindPopup("Stowe Mountain Resort");
+
+var killington = L.marker([43.60964430376488, -72.79537334724705], {
+  icon: skiIcon,
+}).bindPopup("Killington Resort");
+
+var vail = L.marker([39.606149835671346, -106.35482671124608], {
+  icon: skiIcon,
+}).bindPopup("Vail Resort");
+
+var sun = L.marker([43.66028805359189, -114.40531864121775], {
+  icon: skiIcon,
+}).bindPopup("Sun Valey Resort");
+
+var skiSlopes = L.layerGroup([shawnee, camelback, montage, jackfrost, sawmill, blueknob, whiteface, stowe, killington, vail, sun]);
+
+// parks
+(yose = L.marker([37.86, -119.53], { icon: npsIcon }).bindPopup(
+  '<b>Yosemite National</b> Park<a href="yose.html"><br>[Details...]</a>'
+)),
+  (olym = L.marker([47.79, -123.61], { icon: npsIcon }).bindPopup(
     "Olympic National Park."
-  );
+  ));
 shen = L.marker([38.47, -78.45], { icon: npsIcon }).bindPopup(
   "Shenandoah National Park."
 );
@@ -72,13 +127,9 @@ gaar = L.marker([38.62, -90.18], { icon: npsIcon }).bindPopup(
 havo = L.marker([19.51, -155.37], { icon: npsIcon }).bindPopup(
   "Hawaiʻi Volcanoes National Park"
 );
-flnp = L.marker([
-
-  -45.3853332530258, 167.61956926207236
-
-], { icon: nzIcon }).bindPopup(
-  "Fiordland National Park"
-);
+flnp = L.marker([-45.3853332530258, 167.61956926207236], {
+  icon: nzIcon,
+}).bindPopup("Fiordland National Park");
 
 var parks = L.layerGroup([
   yose,
@@ -143,7 +194,7 @@ var map = L.map("map", {
   center: [40.01224336270498, -97.76226241579424],
   zoom: setInitialMapZoom(),
   layers: [osm, cities],
-  worldCopyJump: true
+  worldCopyJump: true,
 });
 
 window.addEventListener("resize", function (event) {
@@ -173,5 +224,8 @@ var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 layerControl.addBaseLayer(openTopoMap, "OpenTopoMap");
 layerControl.addOverlay(parks, "Parks");
+layerControl.addOverlay(skiSlopes, "Ski Slopes");
+
 
 map.addLayer(parks);
+map.addLayer(skiSlopes);
