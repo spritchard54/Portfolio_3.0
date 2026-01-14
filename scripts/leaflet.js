@@ -65,9 +65,17 @@ var vail = L.marker([39.606149835671346, -106.35482671124608], {
 
 var sun = L.marker([43.66028805359189, -114.40531864121775], {
   icon: skiIcon,
-}).bindPopup("Sun Valey Resort");
+}).bindPopup("Sun Valley Resort");
 
-var skiSlopes = L.layerGroup([shawnee, camelback, montage, jackfrost, sawmill, blueknob, whiteface, stowe, killington, vail, sun]);
+var rountop = L.marker([40.10931500506847, -76.92724075448373], {
+  icon: skiIcon,
+}).bindPopup("Roundtop Mountain Resort");
+
+var liberty = L.marker([39.76341233073685, -77.37482164310148], {
+  icon: skiIcon,
+}).bindPopup("Libtery Mountain Resort");
+
+var skiSlopes = L.layerGroup([shawnee, camelback, montage, jackfrost, sawmill, blueknob, whiteface, stowe, killington, vail, sun, rountop, liberty]);
 
 // parks
 (yose = L.marker([37.86, -119.53], { icon: npsIcon }).bindPopup(
