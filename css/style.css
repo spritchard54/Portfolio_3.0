@@ -907,3 +907,12 @@ h2.trips {
 .material-symbols-outlined {
     color: #2e5e4e;
 }
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    margin-left: auto;
+}
